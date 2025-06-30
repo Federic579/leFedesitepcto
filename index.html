@@ -11,68 +11,122 @@
       background-color: #f4f4f4;
       color: #333;
     }
-    header {
-      background-color: #2c3e50;
+
+    header.hero {
+      background-color: #4a90e2;
       color: white;
       padding: 2rem;
       text-align: center;
-      animation: fadeIn 1s ease-in;
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: wrap;
     }
+
+    .hero-text {
+      text-align: center;
+    }
+
+    .hero-img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
     nav {
-      background-color: #34495e;
+      background-color: #2f6bb1;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
+
     nav a {
       color: white;
       padding: 1rem;
       text-decoration: none;
       transition: background-color 0.3s;
     }
+
     nav a:hover {
-      background-color: #1abc9c;
+    background-color: #1abc9c;
     }
-    .content {
+
+
+    .sottotitolo {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+  
+    }
+
+    main.content {
       padding: 2rem;
-      animation: slideUp 0.8s ease-in;
     }
-    .intro-box {
+
+    .card-grid {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1 1 300px;
       background-color: white;
-      border-radius: 10px;
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #ccc;
     }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: white;
+      color: #4a90e2;
+      border: 2px solid #4a90e2;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #4a90e2;
+      color: white;
+    }
+
     footer {
-      background-color: #2c3e50;
+      background-color: #4a90e2;
       color: white;
       text-align: center;
       padding: 1rem;
-      position: relative;
-      bottom: 0;
-      width: 100%;
       margin-top: 2rem;
     }
-    img.logo {
-      height: 50px;
-      margin: 0.5rem 0;
+
+    .card-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
     }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @keyframes slideUp {
-      from {transform: translateY(20px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
+
+    
   </style>
    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>Esperienze PCTO</h1>
   </header>
 
@@ -84,24 +138,49 @@
     <a href="estero.html">PCTO all'Estero</a>
   </nav>
 
-  <div class="content">
-    <div class="intro-box">
-      <h2>Chi sono</h2>
-      <p>Mi chiamo Federico Tung, sono uno studente dell'Istituto Tecnico Informatico <strong>Aldini Valeriani</strong> e in questa pagina vi presento il mio percorso formativo nell'ambito del <strong>PCTO</strong> (Percorsi per le Competenze Trasversali e per l'Orientamento) svolto nel triennio delle superiori.</p>
+  <div class="hero-text">
+      <h1>Ciao! Sono <strong>Federico Tung</strong></h1>
+      <p class="sottotitolo">Sono uno studente dell'Istituto Tecnico Aldini Valeriani. In questo sito presento il mio percorso PCTO svolto durante il triennio, tra esperienze aziendali e formative in Italia e all'estero.</p>
     </div>
-  </div>
+  </header>
 
-  <div class="content">
-    <div class="intro-box">
-        <h2>Benvenuti nel mio portfolio PCTO</h2>
-        <p>Durante il triennio, ho avuto l'opportunità di svolgere attività PCTO presso aziende reali e in contesti internazionali. Ogni esperienza è stata unica e mi ha aiutato a crescere sia dal punto di vista <strong>tecnico</strong> che <strong>personale</strong>.</p>
-    </div>
-  </div>
+  <main class="content">
+    <section class="card-grid">
+      <div class="card color1">
+        <img src="mast-bologna.jpg" alt="Logo MAST" class="card-img">
+        <h2>📦 MAST - Colla che Incolla</h2>
+        <p>Packaging e creatività: il mio primo progetto pratico in un contesto aziendale.</p>
+        <a href="mast.html" class="button">Scopri di più</a>
+      </div>
 
-  
+      <div class="card color2">
+        <img src="clauger-bologna.png" alt="Logo CLAUGER" class="card-img">
+        <h2>❄️ Clauger</h2>
+        <p>Esperienza nel reparto commerciale di un’azienda internazionale di refrigerazione.</p>
+        <a href="clauger.html" class="button">Scopri di più</a>
+      </div>
+
+      <div class="card color3">
+        <img src="bitbang-bologna.png" alt="Logo BITBANG" class="card-img">
+        <h2>📊 BitBang</h2>
+        <p>Digital analytics e software development su progetti reali aziendali.</p>
+        <a href="bitbang.html" class="button">Scopri di più</a>
+      </div>
+
+      <div class="card color4">
+        <img src="cambridgeUniversity-cambridge.jpg" alt="Logo estero" class="card-img">
+        <h2>🌍 Esperienze all'Estero</h2>
+        <p>Viaggi formativi a Cambridge e Dublino per vivere l’inglese e conoscere nuove culture.</p>
+        <a href="estero.html" class="button">Scopri di più</a>
+      </div>
+    </section>
+
+    
+  </main>
 
   <footer>
     <p>&copy; Federico Tung 2025</p>
   </footer>
 </body>
 </html>
+

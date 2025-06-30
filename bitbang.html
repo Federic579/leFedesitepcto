@@ -20,19 +20,61 @@
     <a href="estero.html">PCTO all'Estero</a>
   </nav>
 
-  <img src="bitbang-logo.png" alt="Logo bitbang" class="large-img">
+  <section class="category-wrapper">
+      <h2>BitBang - Esperienza Professionale in 5C IN</h2>
+      <p>Nel mio ultimo anno, ho partecipato a un'esperienza molto avanzata presso <strong>BitBang</strong>, un'azienda specializzata in <u>digital analytics</u> e <u>business intelligence</u>.</p>
+      <p>Il mio ruolo si è inserito nel reparto di <strong>software development</strong>, dove ho lavorato su <u>progetti reali</u> con clienti importanti come <strong>Leroy Merlin</strong>, <strong>Pirelli</strong> e <strong>Beretta</strong>. Lo scopo era migliorare la performance dei loro siti web attraverso l’analisi e l’ottimizzazione dei dati digitali.</p>
+      <p><u>Competenze acquisite:</u> analisi dei dati, progettazione di interfacce, sviluppo software, collaborazione in team e comprensione dei processi aziendali nel mondo digitale.</p>
+    </section>
 
-
-  <div class="content">
-    <div class="card">
-      <h2>Esperienza presso BitBang</h2>
-      <p>Durante l’anno di 5C IN, ho avuto l'opportunità di svolgere il mio PCTO presso <strong>BitBang</strong>, un'azienda che si occupa di digital analytics, data strategy e business intelligence per grandi imprese. È un ambiente molto dinamico e orientato all’innovazione.</p>
-      <p>Nel ruolo, ho collaborato al team di <strong>software developing</strong>, analizzando i siti di aziende di rilievo come Leroy Merlin, Pirelli e Beretta. L’obiettivo era individuare possibili miglioramenti in termini di performance e user experience. Questa esperienza mi ha permesso di approfondire strumenti e metodologie del mondo dello sviluppo web e dell’analisi dei dati.</p>
-      <img src="leroymerlin-logo.png" class="logo"> 
-      <img src="pirelli-logo.jpg" class="logo"> 
-      <img src="beretta-logo.jpg" class="logo"> 
+<section class="gallery-slider">
+  <button class="prev">&#10094;</button>
+  <div class="gallery-track">
+    <div class="gallery-item">
+      <img src="bitbang-logo.png" alt="logo">
+      <p>Il logo</p>
+    </div>
+    <div class="gallery-item">
+      <img src="bitbang-bologna.png" alt="edificio">
+      <p>La struttura</p>
+    </div>
+    <div class="gallery-item">
+      <img src="leroymerlin-logo.png" alt="collab1">
+      <p>Collaborazioni - Leroy Merlin</p>
+    </div>
+    <div class="gallery-item">
+      <img src="pirelli-logo.jpg" alt="collab2">
+      <p>Collaborazioni - Pirelli</p>
+    </div>
+    <div class="gallery-item">
+      <img src="beretta-logo.jpg" alt="collab3">
+      <p>Collaborazioni - Beretta</p>
     </div>
   </div>
+  <button class="next">&#10095;</button>
+</section>
+
+<script>
+  const track = document.querySelector('.gallery-track');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let index = 0;
+
+  nextBtn.addEventListener('click', () => {
+    if (index < track.children.length - 1) {
+      index++;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index > 0) {
+      index--;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+  });
+</script>
+
   <footer>
     <p>&copy; Federico Tung 2025</p>
   </footer>

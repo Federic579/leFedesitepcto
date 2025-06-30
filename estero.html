@@ -19,20 +19,68 @@
     <a href="bitbang.html">BitBang</a>
     <a href="estero.html">PCTO all'Estero</a>
   </nav>
-  <div class="content">
-    <div class="card">
-      <h2>Cambridge (3C IN)</h2>
-      <p>Durante la classe 3C IN ho partecipato a una settimana formativa a <strong>Cambridge</strong>, nel Regno Unito. Il progetto ha incluso attività culturali, workshop in lingua inglese e visite guidate della storica città universitaria. Un’opportunità preziosa per migliorare la conoscenza della lingua e immergersi nella cultura britannica.</p>
-    </div>
+ <main>
+    <section class="category-wrapper">
+      <div class="slider-container">
+        <button class="slide-btn left">&#10094;</button>
+        <div class="slider-track">
+        <div class="slide"><img src="cambridgeUniversity-cambridge.jpg" alt="College a Cambridge"></div>
+        <div class="slide"><img src="cambridgePostcards.jpg" alt="Cultura Britannica"></div>
+        <div class="slide"><img src="buckinghamPalace.jpeg" alt="Passeggiata a Cambridge"></div>
+        <div class="slide"><img src="Chinatown.jpeg" alt="Passeggiata a Cambridge"></div>
+        <div class="slide"><img src="teaParty.jpeg" alt="Passeggiata a Cambridge"></div>
+        <div class="slide"><img src="fish&chips.jpeg" alt="Passeggiata a Cambridge"></div>
+      </div>
+  <button class="slide-btn right">&#10095;</button>
+</div>
+      <h2>Cambridge </h2>
+      <p>Ho avuto la possibilità di partecipare a un’esperienza formativa a <strong>Cambridge</strong>, una delle città universitarie più rinomate al mondo.</p>
+      <p>Abbiamo svolto <u>attività linguistiche</u>, <u>visite culturali</u> e ci siamo immersi nella <strong>vita quotidiana britannica</strong>, esplorando college, musei e quartieri storici.</p>
+      <p><u>Competenze acquisite:</u> ascolto e dialogo in inglese, conoscenza della cultura locale, autonomia e spirito di adattamento.</p>
+    </section>
 
-    <div class="card">
-      <h2>Dublino (4C IN)</h2>
-      <p>Nel quarto anno, ho preso parte a un’esperienza simile a <strong>Dublino</strong>, in Irlanda. L’iniziativa ha previsto percorsi culturali, visite a musei, incontri con studenti locali e momenti di esplorazione autonoma. Anche in questo caso, l’esperienza mi ha aiutato a crescere a livello personale e linguistico.</p>
-    </div>
+    <section class="category-wrapper">
+      <div class="slider-container">
+        <button class="slide-btn left">&#10094;</button>
+        <div class="slider-track">
+        <div class="slide"><img src="trinityCollege.jpg" alt="Passeggiata a Cambridge"></div>
+        <div class="slide"><img src="cliffsOfMoher.jpeg" alt="College a Cambridge"></div>
+        <div class="slide"><img src="dublinoAlloggio.jpeg" alt="Cultura Britannica"></div>
+        <div class="slide"><img src="guinnessStorehouse.jpeg" alt="Passeggiata a Cambridge"></div>
+      </div>
+        <button class="slide-btn right">&#10095;</button>
+      </div>
+      <h2>Dublino </h2>
+      <p>L'anno dopo ho avuto anche l'opportunità di prendere parte a un viaggio di formazione a <strong>Dublino</strong>, capitale dell’Irlanda, con l’obiettivo di approfondire la lingua inglese in un contesto internazionale.</p>
+      <p>L’esperienza ha incluso <u>lezioni interattive</u>, <u>attività con madrelingua</u> e visite ai principali luoghi culturali della città, come la Guinness Storehouse e il Trinity College.</p>
+      <p><u>Competenze acquisite:</u> miglioramento linguistico, apertura mentale, capacità relazionali e gestione del tempo.</p>
+    </section>
+  </main>
 
-    
+  <script>
+  document.querySelectorAll('.slider-container').forEach(container => {
+    const track = container.querySelector('.slider-track');
+    const slides = container.querySelectorAll('.slide');
+    const prev = container.querySelector('.slide-btn.left');
+    const next = container.querySelector('.slide-btn.right');
+    let index = 0;
 
-  </div>
+    next.addEventListener('click', () => {
+      if (index < slides.length - 1) {
+        index++;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+    });
+
+    prev.addEventListener('click', () => {
+      if (index > 0) {
+        index--;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+    });
+  });
+</script>
+
   <footer>
     <p>&copy; Federico Tung 2025</p>
   </footer>
